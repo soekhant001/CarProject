@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #eaeaea;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: #222;
+    font-weight: 600;
+    user-select: none;
+    opacity: 0;
+    animation: SlideInLeft 0.5s linear forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    margin: 0 20px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar .active{
+    color: #1743e3;
+}
+.social-media {
+    width: 150px;
+    height: 40px;
+    display: flex;
+   justify-content: space-between;
+}
+.social-media a{
+    width: 40px;
+    height: 40px;
+    /* background: transparent; */
+    border: 2px solid transparent;
+    padding: 7px;
+    transform: rotate(45deg);
+    transition: 0.7s;
+    /* opacity: 0; */
+   
+}
+
+.social-media a:hover{
+    border-color: #eaeaea;
+}
+
+.social-media a i{
+    font-size: 24px;
+    color: #eaeaea;
+    transform: rotate(-45deg);
+    /* opacity: 0; */
+
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+
+.home-content{
+    max-width: 700px;
+}
+
+.home-content h1{
+    font-size: 50px;
+    line-height: 1.2em;
+}
+
+.home-content h3{
+    font-size: 40px;
+    color: #1743e3;
+}
+
+.home-content p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: #1743e3;
+    border: 2px solid #1743e3;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #eaeaea;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .5s;
+}
+.btn:hover{
+    background: transparent;
+    color: #1743e3;
+}
+
+.home-img{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+    right: -7%;
+
+}
+
+.home-img .rhombus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#eaeaea ;
+    border: 25px solid #1743e3;
+    box-shadow: -15px 15px 5px rgba(0, 0, 0, .2);
+}
+
+.home-img .rhombus img{
+    position: absolute;
+    max-width: 800px;
+    top: 100px;
+    left: -300px;
+    transform: rotate(-45deg);
+}
+.home .rhombus2 {
+    position: absolute;
+    top: -25%;
+    right: -17%;
+    width: 700px;
+    height: 700px;
+    background: #1743e3;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.ani-delay-500{
+    animation-delay: 0.4s;
+}
+.ani-delay-1000{
+    animation-delay: 0.5s;
+}
+.ani-delay-1500{
+    animation-delay: 0.6s;
+}
+.ani-delay-2000{
+    animation-delay: 0.7s;
+}
+.ani-delay-2500{
+    animation-delay: 0.8s;
+}
+.ani-delay-3000{
+    animation-delay: 0.9s;
+}
+.ani-delay-3500{
+    animation-delay: 1s;
+}
+
+
+/* animation */
+
+/* slide-in-left */
+.slide-in-left{
+    opacity: 0;
+    animation-name: SlideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes SlideInLeft{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+
+/* slide-top */
+.slide-top{
+    opacity: 0;
+    animation-name: SlideTop;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes SlideTop{
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+
+/* slide-right */
+
+.slide-in-right{
+        opacity: 0;
+        animation-name: SlideInRight;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+@keyframes SlideInRight{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+        transform: rotate(45deg);
+
+    }
+}
+
+/* slide-in-top */
+
+.slide-in-top{
+        opacity: 0;
+        animation-name: SlideInTop;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+
+}
+
+@keyframes SlideInTop{
+    from{
+        transform: translateY(-230px);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* fade-in */
+.fade-in{
+    opacity: 0;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes FadeIn{
+    from{
+        /* transform: translateY(-230px); */
+        opacity: 0;
+
+    }
+    to{
+        /* transform: translateY(0); */
+        opacity: 1;
+    }
+}
+
+.slide-in-bottom{
+    opacity: 0;
+    animation-name: SlideInBottom;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes SlideInBottom{
+from{
+    transform: translateY(230px);
+    opacity: 0;
+
+}
+to{
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+/* rhombus */
+.up{
+    opacity: 0;
+    animation-name: Up;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+@keyframes Up{
+    from{
+        transform: scale(1.1);
+        opacity: 0;
+
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+
+    }
+}
+
+/* car */
+.car{
+    opacity: 0;
+    animation-name: Car;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+@keyframes Car{
+    from{
+        
+        transform: translate(200px,-400px) scale(0) ;
+        opacity: 0;
+
+    }
+    to{
+        transform: translate(0px,0px) scale(1) rotate(-45deg);
+        opacity: 1;
+
+    }
+}
+
